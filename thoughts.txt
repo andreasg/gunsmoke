@@ -1,0 +1,38 @@
+GUNSMOKE
+
+
+Då jag började att programmera gunsmoke var det inte mycket jag visste 
+om vad som skulle krävas för att det skulle bli ett fungerande spel.
+
+Jag hade ingen aning om hur man implementerade en effektiv tile-motor - 
+och tanken på 'layers' hade aldrig slagit mig. Ambitionen var på så låg 
+nivå att den disignades med tanken att alla object, sprites etc. endast 
+är 'passable' eller 'non-passable'. Och inget är större än TILE_W x TILE_H.
+
+Detta har jag fått ångra. Tile-layers är ett krav. Det är fult och inte bra
+någon stans att inte kunna ha tiles som har höjd (tex träd), så att man 
+bara kolliderar med basen, och den 'övre' delen av tilen ritas ovanpå alla 
+sprites.
+
+Jag ansåg även att det skulle vara nog med att ha 4 definierade riktingar.
+N, E S och W. Detta var dumt. Det hade varit mycket enklare att redan från
+början anama ett system med normaliserade vektorer (dx, dy).
+
+Begränsningar i sprite filen är att den är otroligt ostrukturerad. Alla 
+sprites animeras, så en 'struct ANIMATION' hade förenklat mycket. Att jag 
+sedan sökte bland strängar varjegång spriten skulle blittas - även om det 
+var samma bitmap som förra gången är helt galet dumt. Spriten måste ha minst
+en pekare till en BITMAP - kanske t.om två, en till den aktiva, och en till liket 
+eller något sådant. Kanske kan man cacha animationer?
+
+Bullet.c lider mest av att det ursprungliga valet med endast 4 riktningar var 
+värdelöst - och nu lider bullet av det.
+
+
+
+Något som gäller för allt utom highscore är att det borde ha implementerats som
+listor istället för arrayer som måste reallokeras varjegång den ska utökas.
+
+Blittern är även den rätt så kass, jag fattar inte hur den fungerar.......
+
+Det käns även lite onödigt att TILE måste veta sin x och y koordinat.

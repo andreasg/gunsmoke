@@ -1,0 +1,128 @@
+<SpriteIndex>
+  <!-- Template
+       <Name>
+         <ShortName></ShortName>
+         <Width></Width>
+         <Height></Height>
+         <SpriteSheetWidth></SpriteSheetWidth>
+         <MoveFrameCount></MoveFrameCount>
+         <CorpseFrame></CorpseFrame>
+         <MoneyDropMax></MoneyDropMax>
+         <MoneyDropMin></MoneyDropMin>
+         <Health></Health>
+         <WeaponType></WeaponType>
+         <BulletDamage></BulletDamage>
+         <DefaultMovementDir></DefaultMovementDir>
+         <MovementSpeed></MovementSpeed>
+       </Name>
+       -->
+  <!-- Player -->
+  <Player>
+    <ShortName>Player</ShortName>
+    <Width>30</Width>
+    <Height>40</Height>
+    <SpriteSheetWidth>390</SpriteSheetWidth>
+    <MoveFrameCount>4</MoveFrameCount>
+    <CorpseFrame>12</CorpseFrame>
+    <MoneyDropMax>0</MoneyDropMax>
+    <MoneyDropMin>0</MoneyDropMin>
+    <Health>6</Health>
+    <WeaponType>1</WeaponType>
+    <BulletDamage>1</BulletDamage>
+    <DefaultMovementDir>0</DefaultMovementDir>
+    <FireDir>0</FireDir>
+    <FireClicks>15</FireClicks>
+    <MovementSpeed>2.0</MovementSpeed>
+    <CollisionHeight>20</CollisionHeight>
+    <IsBoss>0</IsBoss>
+    <DefaultState>none</DefaultState>
+  </Player>
+  
+  <!-- Enemies -->
+  <BountyHunter>
+    <ShortName>BountyHunter</ShortName>
+    <Width>30</Width>
+    <Height>40</Height>
+    <SpriteSheetWidth>160</SpriteSheetWidth>
+    <MoveFrameCount>4</MoveFrameCount>
+    <CorpseFrame>4</CorpseFrame>
+    <MoneyDropMax>60</MoneyDropMax>
+    <MoneyDropMin>0</MoneyDropMin>
+    <Health>1</Health>
+    <WeaponType>0</WeaponType>
+    <BulletDamage>1</BulletDamage>
+    <DefaultMovementDir>2</DefaultMovementDir>
+    <FireDir>2</FireDir>
+    <FireClicks>110</FireClicks>
+    <MovementSpeed>1.3</MovementSpeed>
+    <CollisionHeight>34</CollisionHeight>
+    <IsBoss>0</IsBoss>
+    <DefaultState>search</DefaultState>
+  </BountyHunter>
+  
+  <Assassin>
+    <ShortName>Assassin</ShortName>
+    <Width>30</Width>
+    <Height>40</Height>
+    <SpriteSheetWidth>150</SpriteSheetWidth>
+    <MoveFrameCount>4</MoveFrameCount>
+    <CorpseFrame>4</CorpseFrame>
+    <MoneyDropMax>60</MoneyDropMax>
+    <MoneyDropMin>0</MoneyDropMin>
+    <Health>2</Health>
+    <WeaponType>0</WeaponType>
+    <BulletDamage>1</BulletDamage>
+    <DefaultMovementDir>2</DefaultMovementDir>
+    <FireDir>2</FireDir>
+    <FireClicks>70</FireClicks>
+    <MovementSpeed>1.7</MovementSpeed>
+    <CollisionHeight>30</CollisionHeight>
+    <IsBoss>0</IsBoss>
+    <DefaultState>search</DefaultState>
+  </Assassin>
+
+  <Alien>
+    <ShortName>Alien</ShortName>
+    <Width>32</Width>
+    <Height>40</Height>
+    <SpriteSheetWidth>128</SpriteSheetWidth>
+    <MoveFrameCount>3</MoveFrameCount>
+    <CorpseFrame>3</CorpseFrame>
+    <MoneyDropMax>60</MoneyDropMax>
+    <MoneyDropMin>0</MoneyDropMin>
+    <Health>15</Health>
+    <WeaponType>0</WeaponType>
+    <BulletDamage>1</BulletDamage>
+    <DefaultMovementDir>2</DefaultMovementDir>
+    <FireDir>2</FireDir>
+    <FireClicks>25</FireClicks>
+    <MovementSpeed>2.5</MovementSpeed>
+    <CollisionHeight>40</CollisionHeight>
+    <IsBoss>1</IsBoss>
+    <DefaultState>attack</DefaultState>
+  </Alien>
+  
+  <!-- Objects -->
+  <Barrel>
+    <ShortName>Barrel</ShortName>
+    <Width>32</Width>
+    <Height>32</Height>
+    <SpriteSheetWidth>64</SpriteSheetWidth>
+    <MoveFrameCount>1</MoveFrameCount>
+    <CorpseFrame>1</CorpseFrame>
+    <MoneyDropMax>25</MoneyDropMax>
+    <MoneyDropMin>10</MoneyDropMin>
+    <Health>1</Health>
+    <WeaponType>100</WeaponType>
+    <BulletDamage>0</BulletDamage>
+    <DefaultMovementDir>0</DefaultMovementDir>
+    <FireDir>0</FireDir>
+    <FireClicks>30</FireClicks>
+    <MovementSpeed>0.0</MovementSpeed>
+    <CollisionHeight>20</CollisionHeight>
+    <IsBoss>0</IsBoss>
+    <DefaultState>none</DefaultState>
+  </Barrel>
+
+  
+</SpriteIndex>

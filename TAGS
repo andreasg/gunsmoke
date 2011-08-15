@@ -1,0 +1,370 @@
+
+bullet.c,263
+void kill_bullet_list(3,21
+BULLET *fire(fire16,324
+void damage(103,2877
+void blit_bullets(119,3194
+void move_bullet(136,3602
+void update_bullets(214,6016
+BULLET *add_bullet(add_bullet239,6661
+BULLET *sprite_list_fire_guns(sprite_list_fire_guns314,8908
+
+editor_gui.c,393
+void draw_select_lists(6,89
+void list_elem_switch_page(47,1257
+void draw_yes_no_box(89,2285
+void draw_button(111,3034
+void draw_box(122,3415
+void draw_spritelst_ctrl_box(132,3680
+void draw_tilelst_ctrl_box(144,4053
+char *get_wpn_name(get_wpn_name157,4416
+void draw_data_box(170,4737
+void draw_map_from_tree(245,7001
+void draw_map_grid_overlay(303,8934
+void draw_ctrl_box(325,9379
+
+gfx.c,357
+GFX_OBJ *create_gfx_list(create_gfx_list7,115
+BITMAP *search_gfx_list(search_gfx_list19,421
+GFX_OBJ *append_tile_to_gfx_list(append_tile_to_gfx_list43,1240
+int destroy_gfx_list(61,1684
+GFX_OBJ *append_bmp_to_gfx_list(append_bmp_to_gfx_list80,2289
+BITMAP *grab_frame(grab_frame105,3017
+int point_in_rect(125,3481
+int rect_touching_rect(133,3700
+
+gunsmoke.c,2091
+int score 2,22
+int map_complete 3,37
+int state 4,59
+MAP *m m6,83
+int current_map 8,99
+BITMAP *buffer;buffer9,128
+BITMAP *hud_pic hud_pic10,144
+BITMAP *heart heart11,168
+BITMAP *mainmenu mainmenu12,190
+BITMAP *marker marker13,215
+BITMAP *map_complete_bmp map_complete_bmp14,238
+BITMAP *gameover_bmp gameover_bmp15,271
+BITMAP *boss_portrait boss_portrait17,301
+BITMAP *objectives_bg objectives_bg18,331
+char next_map[next_map20,362
+int terminate 21,386
+int facing_ticks 22,405
+SPRITE *player;player24,428
+SPRITE *sprite_list sprite_list25,444
+size_t sprite_list_sz 26,472
+GFX_OBJ *gfx_list gfx_list28,500
+size_t gfx_list_sz 29,526
+BITMAP *bullet_bitmap bullet_bitmap31,551
+BULLET *sprite_bullet_list sprite_bullet_list32,581
+size_t sprite_bullet_list_sz 33,616
+BULLET *player_bullet_list player_bullet_list34,650
+size_t player_bullet_list_sz 35,685
+SCORE *highscores highscores37,720
+char player_name[player_name38,746
+char key_down[key_down40,774
+GLYPH_FACE *game_font game_font42,807
+GLYPH_REND *rend rend43,837
+SAMPLE *fire_snd fire_snd45,863
+SAMPLE *select_snd select_snd46,888
+MIDI *music music47,915
+volatile int speed_counter 50,1005
+void inc_speed_counter(51,1037
+END_OF_FUNCTION(56,1093
+void get_player_name_and_write_score(73,1477
+int init_bitmaps(130,3178
+int init(189,4673
+void parse_fire_keys(266,6594
+void parse_keyboard(320,8696
+void move_world(371,10188
+void blit_to_buffer(399,11083
+void reload_map(409,11487
+void load_next_map(482,13328
+void clean(495,13623
+void draw_main_menu(545,14836
+void write_line(563,15242
+void about_box(570,15417
+void draw_hud(617,17017
+void main_menu(636,17447
+void highscore(673,18567
+void quit_game(705,19688
+void new_game(710,19734
+void textprint_message(717,19859
+void show_map_objectives(758,20857
+void run_game(808,22252
+void kill_all_on_screen(870,24340
+void reduce_player_health(877,24576
+void blit_buffer(904,25504
+void game_over(912,25648
+void complete_map(924,25894
+void game_finished(937,26142
+void (*update(update962,27036
+int main(992,27949
+
+highscore.c,246
+SCORE *load_highscores(load_highscores5,26
+void write_highscores(31,559
+SCORE *last_highscore(last_highscore58,1082
+void add_score_to_highscores(73,1401
+SCORE *create_highscores(create_highscores132,3156
+void destroy_highscores(146,3349
+
+list_element.c,224
+LIST_ELEMENT *add_list_element(add_list_element5,29
+void draw_list_element(34,659
+void destroy_list_element_list(66,1461
+LIST_ELEMENT *list_element_clicked(list_element_clicked78,1750
+void set_pressed_element(96,2127
+
+map.c,390
+scew_tree *new_map(new_map7,183
+void write_map(60,1659
+void modify_map_coord(77,2321
+int forward_map(155,4725
+int point_on_passable(168,4936
+int rect_on_passable(189,5401
+void destroy_map(200,5724
+GFX_OBJ *load_tile_bitmaps(load_tile_bitmaps213,6016
+MAP *create_map(create_map258,7319
+MAP *load_map(load_map274,7668
+void init_map_tiles_gfx(362,10253
+void blit_map(374,10587
+
+mapeditor.c,1041
+int draw_grid 3,24
+char key_down[key_down4,43
+int left_down 5,73
+int middle_down 6,92
+int right_down 7,113
+int mode 8,133
+LIST_ELEMENT *selection selection9,155
+LIST_ELEMENT *spr_elem_lst spr_elem_lst10,187
+size_t spr_elem_lst_sz 11,222
+SPRITE *sprite_list sprite_list12,250
+size_t sprite_list_sz 13,278
+LIST_ELEMENT *tile_elem_lst tile_elem_lst14,305
+size_t tile_elem_lst_sz 15,341
+GFX_OBJ *gfx_list gfx_list16,370
+size_t gfx_list_sz 17,396
+BITMAP *vscreen vscreen18,420
+scew_tree *maptree maptree19,444
+int map_offset 20,471
+int close_program 21,491
+GRID_ITEM grid_item;22,514
+void get_grid_item(25,595
+int init(80,2101
+void load_tiles(115,2942
+void load_sprites(173,4797
+void cleanup(229,6712
+void parse_leftmouse_on_map(238,6996
+void parse_rightmouse_on_map(266,7748
+void parse_leftclick(278,8151
+void parse_middleclick(340,10882
+void parse_rightclick(354,11309
+void parse_mouse(365,11554
+void parse_keyboard(373,11695
+void update_screen(418,12991
+void really_quit(428,13219
+int main(444,13573
+
+primitives.c,68
+POINT get_mouse_pos(6,78
+RECT rec(21,292
+int point_in_rec(33,488
+
+sprite.c,1062
+int ai_countdown 3,21
+PyObject *boss_method boss_method5,44
+PyObject *normal_enemy_method normal_enemy_method6,74
+void init_ai_methods(8,113
+void enemy_normal_movement(62,1358
+void boss_normal_movement(96,2232
+void free_python(127,3068
+void sprite_list_kill_updating(142,3397
+void get_trajectory(160,3937
+SPRITE *touching_sprite_list(touching_sprite_list180,4519
+SPRITE *find_sprite(find_sprite207,5215
+int sprite_list_boss_alive(224,5568
+int move_sprite(239,6019
+void animate_sprite(289,7265
+int spawn_sprite_if_on_screen(313,7888
+void update_enemy_sprite(325,8071
+void update_player_sprite(344,8616
+void update_sprite_list(372,9573
+void blit_sprite_list(393,10164
+SPRITE *create_sprite(create_sprite443,11718
+GFX_OBJ *load_sprite_gfx(load_sprite_gfx466,12215
+void update_sprite_data(498,13209
+GFX_OBJ *complete_sprite_list(complete_sprite_list555,15103
+SPRITE *load_sprite_list(load_sprite_list686,20370
+SPRITE *append_sprite_list(append_sprite_list740,22055
+void destroy_sprite(759,22573
+void destroy_sprite_list(768,22752
+
+tile.c,62
+TILE *create_tile(create_tile6,73
+void destroy_tile(18,278
+
+bullet.h,75
+#define DIVVE_BULLET_H2,23
+typedef struct BULLET 15,185
+} BULLET;24,321
+
+defines.h,3014
+#define DIVVE_DEFINES_H2,24
+#define PLAYER_NAME 5,50
+#define HIGHSCORE_FILE 7,80
+#define HIGHSCORE_NAME_LN 8,124
+#define DEFAULT_BULLETLIST_SIZE 10,154
+#define PI 12,190
+#define FONT_PATH 13,212
+#define MAPDIR 15,245
+#define DEFAULT_MAPNAME 16,272
+#define PORTRAIT_BMP 17,304
+#define OBJECTIVE_TXT 18,340
+#define COMPLETE_TXT 19,379
+#define FIRST_MAP 20,415
+#define NEW_GAME 28,587
+#define HIGHSCORE 29,606
+#define QUIT_GAME 30,626
+#define MAIN_MENU 31,646
+#define SHOW_MAP_OBJECTIVES 32,666
+#define RUN_GAME 33,696
+#define REDUCE_PLAYER_HEALTH 34,715
+#define GAME_OVER 35,746
+#define MAP_COMPLETE 36,766
+#define LOAD_NEXT_MAP 37,789
+#define GAME_FINISHED 38,813
+#define PAUSED 39,838
+#define ABOUT_BOX 40,856
+#define HAT_BMP 42,878
+#define MAINMENU_BMP 43,913
+#define SELECTION_MARKER_BMP 44,958
+#define HIGHSCORE_BMP 45,1019
+#define OBJECTIVES_BMP 46,1066
+#define MAP_COMPLETE_BMP 47,1117
+#define GAMEOVER_BMP 48,1170
+#define CORPSE_LIFE 50,1216
+#define LIFETIME 51,1240
+#define MV_NORMAL_ENEMY 54,1284
+#define MV_BOSS 55,1310
+#define AI_DELAY 56,1328
+#define GFX_EXT 59,1383
+#define GFX_DEPTH 60,1406
+#define NAME_LN 63,1458
+#define LONG_NAME_LN 64,1477
+#define LINE_LN 65,1501
+#define MAX_LINES 66,1520
+#define STEPSIZE 69,1618
+#define MAP_SPEED 70,1637
+#define FRAMETIME 73,1681
+#define WIDTH 76,1724
+#define HEIGHT 77,1742
+#define VSCREEN_H 80,1788
+#define VSCREEN_W 81,1826
+#define HUD_H 83,1851
+#define HUD_W 84,1868
+#define HUD_BG 85,1888
+#define HEART_BMP 86,1922
+#define FONT_W 87,1959
+#define FONT_H 88,1977
+#define TILE_H 91,2013
+#define TILE_W 92,2031
+#define NORTH 95,2076
+#define EAST 96,2092
+#define SOUTH 97,2107
+#define WEST 98,2123
+#define NORTHEAST 99,2138
+#define SOUTHEAST 100,2158
+#define SOUTHWEST 101,2178
+#define NORTHWEST 102,2198
+#define NORTHNORTHWEST 103,2218
+#define NORTHNORTHEAST 104,2243
+#define GFX_INDEX 107,2283
+#define SPRITE_INDEX 108,2327
+#define SND_INDEX 109,2374
+#define WORLD_GFX_DIR 113,2437
+#define SPRITE_GFX 114,2477
+#define BULLET_BMP 118,2543
+#define BULLET_W 119,2592
+#define BULLET_H 120,2611
+#define BULLET_FLY_TIME 121,2630
+#define BULLET_SPEED 122,2657
+#define ANIM_DELAY 126,2727
+#define RIFLE 130,2770
+#define GUNS 131,2786
+#define SHOTGUN 132,2801
+#define UNARMED 133,2819
+#define EDITOR_WIN_W 140,2903
+#define EDITOR_WIN_H 141,2929
+#define TILE_WIN 144,2981
+#define TILE_FRW 145,3020
+#define TILE_REW 146,3060
+#define SPRITE_WIN 148,3100
+#define SPRITE_FRW 149,3143
+#define SPRITE_REW 150,3185
+#define DATA_WIN 152,3227
+#define MAP_WIN 153,3266
+#define ELEM_PER_PAGE 157,3362
+#define LIST_ELEM_W 158,3387
+#define LIST_ELEM_H 159,3411
+#define SCROLL_SPEED 163,3493
+#define OUTLINE_COLOR 167,3531
+#define TEXT_COLOR 168,3576
+#define DEFAULT_COLOR 169,3616
+#define BG_COLOR 170,3656
+#define SEL_COLOR 171,3688
+#define DEAD_COLOR 172,3724
+#define GRID_COLOR 173,3761
+#define TILE_LIST 175,3801
+#define TILE_MODE 180,4005
+#define SPRITE_MODE 181,4025
+
+editor_gui.h,85
+#define DIVVE_EDITOR_GUI_H2,27
+typedef struct GRID_ITEM 31,662
+} GRID_ITEM;37,768
+
+gfx.h,74
+#define DIVVE_GFX_H2,20
+typedef struct GFX_OBJ 12,149
+} GFX_OBJ;15,215
+
+gunsmoke.h,30
+#define DIVVE_GUNSMOKE_H2,25
+
+highscore.h,77
+#define DIVVE_HIGHSCORE_H2,26
+typedef struct _SCORE 11,136
+} SCORE;15,230
+
+list_element.h,93
+#define DIVVE_LIST_ELEMENT_H2,29
+typedef struct LIST_ELEMENT 17,256
+} LIST_ELEMENT;26,435
+
+map.h,66
+#define DIVVE_MAP_H2,20
+typedef struct MAP 17,184
+} MAP;28,498
+
+mapeditor.h,30
+#define DIVVE_MAP_EDITOR2,25
+
+primitives.h,120
+#define DIVVE_PRIMITIVES_H2,27
+typedef struct _POINT 10,81
+} POINT;12,122
+typedef struct RECT 16,134
+} RECT;19,190
+
+sprite.h,77
+#define DIVVE_SPRITE_H2,23
+typedef struct _SPRITE 33,998
+} SPRITE;77,2009
+
+tile.h,69
+#define DIVVE_TILE_H2,21
+typedef struct TILE 10,127
+} TILE;15,226
